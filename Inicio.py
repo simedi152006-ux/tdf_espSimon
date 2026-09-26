@@ -12,40 +12,33 @@ from nltk.stem import SnowballStemmer
 st.markdown("""
 <style>
 
-    /* Fondo */
-    .stApp {
-        background-color: #F8F7F4;
-    }
-
-    /* Título */
+    /* Título principal */
     h1 {
-        color: #292929;
         font-weight: 700;
         letter-spacing: -0.5px;
     }
 
     /* Subtítulos */
     h3 {
-        color: #444444;
         font-weight: 600;
+        margin-top: 25px;
     }
 
     /* Botones */
     .stButton > button {
         border-radius: 10px;
-        border: 1px solid #D8D5CF;
-        background-color: #FFFFFF;
-        color: #333333;
         transition: 0.2s;
     }
 
     .stButton > button:hover {
-        border-color: #8C887F;
-        background-color: #F1EFEA;
+        transform: translateY(-1px);
     }
 
-    /* Separación visual de los campos */
-    .stTextArea textarea,
+    /* Bordes suaves en los campos */
+    .stTextArea textarea {
+        border-radius: 10px;
+    }
+
     .stTextInput input {
         border-radius: 10px;
     }
@@ -124,7 +117,7 @@ with col2:
     ):
         st.session_state.question = "¿Dónde suena la música alta?"
         st.rerun()
-
+        
     if st.button(
         "¿Qué animal maúlla durante la noche?",
         use_container_width=True
